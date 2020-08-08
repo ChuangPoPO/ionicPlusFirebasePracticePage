@@ -2,20 +2,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-idea-details-idea-details-module"], {
@@ -35,100 +21,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons solt=\"start\">\n      <ion-back-button defaultHref=\"/\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Idea Details</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-label position=\"stacked\">Name</ion-label>\n    <ion-input [(ngModel)]=\"idea.name\"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Notes</ion-label>\n    <ion-textarea [(ngModel)]=\"idea.notes\" rows=\"8\"></ion-textarea>\n  </ion-item>\n</ion-content>\n\n<ion-footer *ngIf=\"!idea.id\">\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n\n<ion-footer *ngIf=\"idea.id\">\n  <ion-row no-padding text-center>\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"outline\" color=\"danger\" (click)=\"deleteIdea()\">\n        <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n        Delete\n      </ion-button>\n    </ion-col>\n\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"solid\" color=\"success\" (click)=\"updateIdea()\">\n        <ion-icon name=\"save\" slot=\"start\"></ion-icon>\n        Update\n      </ion-button>\n    </ion-col>\n  </ion-row>\n\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n";
+    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"/\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Idea Details</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-label position=\"stacked\">Name</ion-label>\n    <ion-input [(ngModel)]=\"idea.name\"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Notes</ion-label>\n    <ion-textarea [(ngModel)]=\"idea.notes\" rows=\"8\"></ion-textarea>\n  </ion-item>\n</ion-content>\n\n<ion-footer *ngIf=\"!idea.id\">\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n\n<ion-footer *ngIf=\"idea.id\">\n  <ion-row no-padding text-center>\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"outline\" color=\"danger\" (click)=\"deleteIdea()\">\n        <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n        Delete\n      </ion-button>\n    </ion-col>\n\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"solid\" color=\"success\" (click)=\"updateIdea()\">\n        <ion-icon name=\"save\" slot=\"start\"></ion-icon>\n        Update\n      </ion-button>\n    </ion-col>\n  </ion-row>\n\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n";
     /***/
-  },
-
-  /***/
-  "./src/app/@core/data/domain/model.ts":
-  /*!********************************************!*\
-    !*** ./src/app/@core/data/domain/model.ts ***!
-    \********************************************/
-
-  /*! exports provided: BaseEntity, Idea, Task, JobContent, Staff */
-
-  /***/
-  function srcAppCoreDataDomainModelTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BaseEntity", function () {
-      return BaseEntity;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "Idea", function () {
-      return Idea;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "Task", function () {
-      return Task;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "JobContent", function () {
-      return JobContent;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "Staff", function () {
-      return Staff;
-    });
-
-    var BaseEntity = function BaseEntity() {
-      _classCallCheck(this, BaseEntity);
-    };
-
-    var Idea = /*#__PURE__*/function (_BaseEntity) {
-      _inherits(Idea, _BaseEntity);
-
-      var _super = _createSuper(Idea);
-
-      function Idea() {
-        var _this;
-
-        _classCallCheck(this, Idea);
-
-        _this = _super.call(this);
-        _this.name = '';
-        _this.notes = '';
-        return _this;
-      }
-
-      return Idea;
-    }(BaseEntity);
-
-    var Task = /*#__PURE__*/function (_BaseEntity2) {
-      _inherits(Task, _BaseEntity2);
-
-      var _super2 = _createSuper(Task);
-
-      function Task() {
-        _classCallCheck(this, Task);
-
-        return _super2.apply(this, arguments);
-      }
-
-      return Task;
-    }(BaseEntity);
-
-    var JobContent = function JobContent() {
-      _classCallCheck(this, JobContent);
-    };
-
-    var Staff = function Staff() {
-      _classCallCheck(this, Staff);
-    };
-    /***/
-
   },
 
   /***/
@@ -333,12 +227,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-    /* harmony import */
-
-
-    var src_app_core_data_domain_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! src/app/@core/data/domain/model */
-    "./src/app/@core/data/domain/model.ts");
 
     var IdeaDetailsPage = /*#__PURE__*/function () {
       function IdeaDetailsPage(activateRoute, ideaService, toastCtrl, router) {
@@ -348,7 +236,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.ideaService = ideaService;
         this.toastCtrl = toastCtrl;
         this.router = router;
-        this.idea = new src_app_core_data_domain_model__WEBPACK_IMPORTED_MODULE_5__["Idea"]();
+        this.idea = {
+          name: '',
+          notes: ''
+        };
         this.id = null;
       }
 
@@ -360,11 +251,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ionViewWillEnter",
         value: function ionViewWillEnter() {
-          var _this2 = this;
+          var _this = this;
 
           if (this.id) {
             this.ideaService.getIdea(this.id).subscribe(function (idea) {
-              _this2.idea = idea;
+              _this.idea = idea;
             });
           }
         }
@@ -381,38 +272,38 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addIdea",
         value: function addIdea() {
-          var _this3 = this;
+          var _this2 = this;
 
           this.ideaService.addIdea(this.idea).then(function () {
-            _this3.router.navigateByUrl('/');
+            _this2.router.navigateByUrl('/');
 
-            _this3.showToast('Idea added');
+            _this2.showToast('Idea added');
           }, function (err) {
-            _this3.showToast('There was a problem adding your idea :(');
+            _this2.showToast('There was a problem adding your idea :(');
           });
         }
       }, {
         key: "updateIdea",
         value: function updateIdea() {
-          var _this4 = this;
+          var _this3 = this;
 
           this.ideaService.updateIdea(this.idea).then(function () {
-            _this4.showToast('Idea updated');
+            _this3.showToast('Idea updated');
           }, function (err) {
-            _this4.showToast('There was a problem updating your idea :(');
+            _this3.showToast('There was a problem updating your idea :(');
           });
         }
       }, {
         key: "deleteIdea",
         value: function deleteIdea() {
-          var _this5 = this;
+          var _this4 = this;
 
           this.ideaService.deleteIdea(this.idea.id).then(function () {
-            _this5.router.navigateByUrl('/');
+            _this4.router.navigateByUrl('/');
 
-            _this5.showToast('Idea deleted');
+            _this4.showToast('Idea deleted');
           }, function (err) {
-            _this5.showToast('There was a problem deleting your idea :(');
+            _this4.showToast('There was a problem deleting your idea :(');
           });
         }
       }]);

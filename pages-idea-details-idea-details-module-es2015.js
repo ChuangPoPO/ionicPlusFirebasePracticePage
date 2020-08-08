@@ -9,40 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons solt=\"start\">\n      <ion-back-button defaultHref=\"/\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Idea Details</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-label position=\"stacked\">Name</ion-label>\n    <ion-input [(ngModel)]=\"idea.name\"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Notes</ion-label>\n    <ion-textarea [(ngModel)]=\"idea.notes\" rows=\"8\"></ion-textarea>\n  </ion-item>\n</ion-content>\n\n<ion-footer *ngIf=\"!idea.id\">\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n\n<ion-footer *ngIf=\"idea.id\">\n  <ion-row no-padding text-center>\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"outline\" color=\"danger\" (click)=\"deleteIdea()\">\n        <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n        Delete\n      </ion-button>\n    </ion-col>\n\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"solid\" color=\"success\" (click)=\"updateIdea()\">\n        <ion-icon name=\"save\" slot=\"start\"></ion-icon>\n        Update\n      </ion-button>\n    </ion-col>\n  </ion-row>\n\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n");
-
-/***/ }),
-
-/***/ "./src/app/@core/data/domain/model.ts":
-/*!********************************************!*\
-  !*** ./src/app/@core/data/domain/model.ts ***!
-  \********************************************/
-/*! exports provided: BaseEntity, Idea, Task, JobContent, Staff */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BaseEntity", function() { return BaseEntity; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Idea", function() { return Idea; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Task", function() { return Task; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobContent", function() { return JobContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Staff", function() { return Staff; });
-class BaseEntity {
-}
-class Idea extends BaseEntity {
-    constructor() {
-        super();
-        this.name = '';
-        this.notes = '';
-    }
-}
-class Task extends BaseEntity {
-}
-class JobContent {
-}
-class Staff {
-}
-
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar color=\"primary\">\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"/\"></ion-back-button>\n    </ion-buttons>\n    <ion-title>Idea Details</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-label position=\"stacked\">Name</ion-label>\n    <ion-input [(ngModel)]=\"idea.name\"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Notes</ion-label>\n    <ion-textarea [(ngModel)]=\"idea.notes\" rows=\"8\"></ion-textarea>\n  </ion-item>\n</ion-content>\n\n<ion-footer *ngIf=\"!idea.id\">\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n\n<ion-footer *ngIf=\"idea.id\">\n  <ion-row no-padding text-center>\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"outline\" color=\"danger\" (click)=\"deleteIdea()\">\n        <ion-icon name=\"trash\" slot=\"start\"></ion-icon>\n        Delete\n      </ion-button>\n    </ion-col>\n\n    <ion-col size=\"6\">\n      <ion-button expand=\"block\" fill=\"solid\" color=\"success\" (click)=\"updateIdea()\">\n        <ion-icon name=\"save\" slot=\"start\"></ion-icon>\n        Update\n      </ion-button>\n    </ion-col>\n  </ion-row>\n\n  <ion-toolbar color=\"success\">\n    <ion-button expand=\"full\" fill=\"clear\" color=\"light\" (click)=\"addIdea()\">\n      <ion-icon name=\"checkmark\" slot=\"start\"></ion-icon>\n      Add Idea\n    </ion-button>\n  </ion-toolbar>\n</ion-footer>\n");
 
 /***/ }),
 
@@ -153,8 +120,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var src_app_services_idea_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/idea.service */ "./src/app/services/idea.service.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var src_app_core_data_domain_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/@core/data/domain/model */ "./src/app/@core/data/domain/model.ts");
-
 
 
 
@@ -166,7 +131,10 @@ let IdeaDetailsPage = class IdeaDetailsPage {
         this.ideaService = ideaService;
         this.toastCtrl = toastCtrl;
         this.router = router;
-        this.idea = new src_app_core_data_domain_model__WEBPACK_IMPORTED_MODULE_5__["Idea"]();
+        this.idea = {
+            name: '',
+            notes: ''
+        };
         this.id = null;
     }
     ngOnInit() {
